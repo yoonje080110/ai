@@ -5,7 +5,7 @@ import xgboost as xgb
 import pandas as pd
 import numpy as np
 import os # 파일 경로 처리를 위해 추가
-from sklearn.model_selection import train_test_split
+from scikit-learn.model_selection import train_test_split
 
 # 파일 경로 정의 (streamlit_app.py와 같은 폴더에 있다고 가정)
 DATA_FILE_PATH = "Student_Study_data.csv"
