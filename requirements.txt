@@ -1,7 +1,9 @@
+pandas
+numpy
+scikit-learn
 xgboost
 streamlit
 pandas
 numpy
 os
-scikit-learn
 sklearn
