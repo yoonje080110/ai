@@ -3,6 +3,4 @@ numpy
 scikit-learn
 xgboost
 streamlit
-pandas
-numpy
-sklearn
+
