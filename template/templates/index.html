@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>목표 CGPA 맞춤 공부/수면 추천</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f8ff; /* 파스텔 블루 배경 */
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .container {
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+      }
+      h1 {
+        color: #ff69b4; /* 핑크색 제목 */
+        margin-bottom: 25px;
+        font-size: 1.8em;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #6a5acd; /* 보라색 라벨 */
+      }
+      input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1em;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #9370db; /* 보라색 버튼 */
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #8a2be2; /* 진한 보라색 */
+      }
+      .result-box {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #e6e6fa; /* 연보라색 배경 */
+        text-align: left;
+        white-space: pre-wrap; /* 줄바꿈 유지 */
+        line-height: 1.6;
+        color: #483d8b; /* 진한 보라색 글씨 */
+        border: 1px solid #d8bfd8;
+      }
+      .error-message {
+        color: #dc3545; /* 빨간색 에러 메시지 */
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>✨ 목표 CGPA 맞춤 추천기 ✨</h1>
+      <form action="/recommend" method="post">
+        <label for="goal_cgpa">목표 CGPA를 입력해 주세요 (예: 3.5)</label>
+        <input
+          type="text"
+          id="goal_cgpa"
+          name="goal_cgpa"
+          placeholder="0.0 ~ 4.5 사이 숫자"
+        />
+        <button type="submit">공부/수면 시간 추천받기</button>
+      </form>
+
+      {% if result %}
+      <div class="result-box {% if error %}error-message{% endif %}">
+        <p>{{ result }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
