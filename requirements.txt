@@ -3,4 +3,4 @@ streamlit
 pandas
 numpy
 os
-train_test_split
+sklearn
