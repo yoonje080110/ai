@@ -13,7 +13,7 @@ DATA_FILE_PATH = "Student_Study_data.csv"
 # 캐싱: Streamlit 앱이 실행될 때 한 번만 데이터를 로드하고 전처리하도록 합니다.
 
 
-df_raw = pd.read_csv("Student_Study_data.csv")
+df_raw = pd.read_csv("data/Student_Study_data.csv")
 
 
 # CGPA 등급 문자열 → float 변환
