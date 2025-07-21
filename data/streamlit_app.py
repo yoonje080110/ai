@@ -1,4 +1,4 @@
-pip install scikit-learn
+
 
 import streamlit as st # Streamlit을 사용하려면 필수!
 import xgboost as xgb
