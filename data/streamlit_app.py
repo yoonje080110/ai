@@ -61,7 +61,7 @@ def train_model(df_processed):
     return model, feature_columns, study_min, study_max, sleep_min, sleep_max
 
 # 데이터 로드 및 모델 학습 실행
-df = pd.read_csv(r"C:\Users\qww93\xgboost\data\Student_Study_data.csv")
+df = pd.read_csv(r"data/Student_Study_data.csv")
 # 7. 목표 CGPA에 맞춘 추천 공부/수면시간
 def predict_best_combination(goal_cgpa, model, feature_columns, study_min, study_max, sleep_min, sleep_max):
     study_range = np.arange(study_min, study_max + 1)
